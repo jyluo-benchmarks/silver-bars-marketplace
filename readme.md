@@ -23,7 +23,7 @@ The article can be [downloaded here](http://www.xpteam.com/jeff/writings/objectc
 
 ### Register an order
 
-The `LiveOrderBoard` should allow the user to register an `Order`, which, according to the requirements, 
+The [`LiveOrderBoard`](https://github.com/jan-molak/silver-bars-marketplace/blob/master/src/main/java/com/silverbars/LiveOrderBoard.java) should allow the user to register an [`Order`](https://github.com/jan-molak/silver-bars-marketplace/blob/master/src/main/java/com/silverbars/domain/Order.java), which, according to the requirements, 
 _"must contain the following fields"_: 
 user id, order quantity (e.g.: 3.5 kg), price per kg (e.g.: £303) as well as the type of order: either buy or sell.
 
@@ -45,7 +45,7 @@ which `Money` type is wrapped in the `PricePerKg` to retain the domain concept
 
 _To see how this design could be improved to better follow OOP, see my notes in the [Improving the design](#improving-the-design) section below._  
 
-With the above in place, the registration of an `Order` looks as follows:
+With the above in place, the registration of an `Order` [looks as follows](https://github.com/jan-molak/silver-bars-marketplace/blob/master/src/test/java/com/silverbars/domain/OrderTest.java):
 
 ```java
 LiveOrderBoard board = new LiveOrderBoard();
@@ -72,13 +72,13 @@ board.register(new Order(
 ));
 ```
 
-To simplify this further, I've created a simple DSL which you can see being used in the automated tests:
+To simplify this further, I've created a simple DSL which you can [see being used in the automated tests](https://github.com/jan-molak/silver-bars-marketplace/blob/master/src/test/java/com/silverbars/LiveOrderBoardTest.java#L33):
 
 ```java
 board.register(buy(kg(3.5), £(306), Alice));
 ```
 
-The tiny DSL helps to highlight the important details of the tests and avoid most of the boilerplate code.
+[This tiny DSL](https://github.com/jan-molak/silver-bars-marketplace/tree/master/src/test/java/com/silverbars/support) helps to highlight the important details of the tests and avoid most of the boilerplate code.
 
 _**Side note 1**: The `£(amount)` function is an alias for `PricePerKg.of(GBP, amount)`, which makes 
 the test easier to read, but to be useful requires the developers working with such code to be able to use 
@@ -103,20 +103,20 @@ board.cancel(order);
 ```
 
 To keep it simple, the current implementation does not throw an exception when a user tries to cancel someone else's order
-(nor it will notify the authorities) - the operation will just not affect the state of the board.
+(nor it will notify the authorities ;) ) - the operation will just not affect the state of the board.
 
 ### Summary information of live orders
 
-The `LiveOrderBoard` is backed by a simple `List<Order>` implementation, which makes the cost of inserting (registering)
+The [`LiveOrderBoard`](https://github.com/jan-molak/silver-bars-marketplace/blob/master/src/main/java/com/silverbars/LiveOrderBoard.java#L16) is backed by a simple `List<Order>` implementation, which makes the cost of inserting (registering)
 and removing (cancelling) `Orders` linear - `O(n)`. 
  
-To generate a "live summary", the orders in the list need to be aggregated and mapped to instances of `OrderSummary`.
+To generate a "live summary", the orders in the list need to be [aggregated and mapped](https://github.com/jan-molak/silver-bars-marketplace/blob/master/src/main/java/com/silverbars/LiveOrderBoard.java#L28) to instances of `OrderSummary`.
 As this is done using Java 8 Streams API, the cost of aggregation and mapping is kept at `O(n)`, as the list only needs
 to be processed once.
 
-The list of `OrderSummary` objects is sorted using the `OrderComparator`, 
-which is a composition of three comparators. If there was a need to make the ordering rules
-more sophisticated the list of comparators could be made dynamic, or the comparator injected into 
+The list of `OrderSummary` objects is sorted using the [`OrderComparator`](https://github.com/jan-molak/silver-bars-marketplace/blob/master/src/main/java/com/silverbars/OrderComparator.java#L9), 
+which is a composition of three other comparators. The comparators in question fulfil the ordering requirements of the exercise, but  are [hard-coded in the `OrderComparator`](https://github.com/jan-molak/silver-bars-marketplace/blob/master/src/main/java/com/silverbars/OrderComparator.java#L10-L12). If there was a need to make the ordering rules
+more sophisticated the list of comparators could be made configurable, or an alternative comparator injected into 
 the `LiveOrderBoard`.
 
 ## Design Considerations
@@ -141,7 +141,7 @@ The exercise puts a constraint on the design of the `Order` class saying that:
 > - price per kg (e.g.: £303)
 > - order type: BUY or SELL
 
-If the requirement stated that the _`Order` class must contain the following **information**_ rather than fields, 
+If the requirement stated that the _`Order` class must contain the following **information**_ rather than **fields**, 
 an alternative, more OOP-friendly design would be possible.
 
 Instead of defining an `Order` as 
@@ -178,9 +178,8 @@ we'd have:
 new OrderSummary(new Buy(Quantities.getQuantity(10, KILOGRAM), PricePerKg.of(GBP, 203)));
 ```
 
-The above refactoring would also allow us to use polymorphism instead of `if` statements in the `OrderComparator` and
-make the `Bid` a part of the `Order` and `OrderSummary`, rather than a utility class used merely to make the conversion from `Order` to `OrderSummary`
-easier.
+The above refactoring would allow us to use polymorphism instead of `if` statements in the `OrderComparator` and
+make the `Bid` a part of both the `Order` and `OrderSummary`, rather than a [utility class](https://github.com/jan-molak/silver-bars-marketplace/blob/master/src/main/java/com/silverbars/domain/Bid.java) used merely to [make the conversion from `Order` to `OrderSummary` easier](https://github.com/jan-molak/silver-bars-marketplace/blob/master/src/main/java/com/silverbars/LiveOrderBoard.java#L30).
 
 ----
 
