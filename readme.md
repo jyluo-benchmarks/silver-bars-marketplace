@@ -159,8 +159,9 @@ we could introduce a `Bid` interface, with two concrete implementations: `Buy` a
 
 ```java
 new Order(
-        new Buy(Quantities.getQuantity(10, KILOGRAM), PricePerKg.of(GBP, 203),
-        UserId.of("user 1")
+        UserId.of("user 1"),
+        Quantities.getQuantity(10, KILOGRAM),
+        new Buy(PricePerKg.of(GBP, 203)
 );
 ```
 
@@ -175,7 +176,7 @@ new OrderSummary(Quantities.getQuantity(10, KILOGRAM), PricePerKg.of(GBP, 203), 
 we'd have:
 
 ```java
-new OrderSummary(new Buy(Quantities.getQuantity(10, KILOGRAM), PricePerKg.of(GBP, 203)));
+new OrderSummary(Quantities.getQuantity(10, KILOGRAM), new Buy(PricePerKg.of(GBP, 203)));
 ```
 
 The above refactoring would allow us to use polymorphism instead of `if` statements in the `OrderComparator` and
