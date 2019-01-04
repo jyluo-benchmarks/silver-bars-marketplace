@@ -12,7 +12,7 @@ import java.util.concurrent.atomic.AtomicLong;
 
 final public class OrderSummary {
 
-    public static final @kg int Zero_Kg = 0 * kg;
+    public static final @kg double Zero_Kg = 0 * kg;
     // public static final @kg long Zero_Kg = 0L * kg;
     // public static final @kg float Zero_Kg = 0.0f * kg;
     // public static final @kg Number Zero_Kg = 0.0d * kg;
@@ -24,24 +24,24 @@ final public class OrderSummary {
 
     private final PricePerKg pricePerKg;
     private final Order.Type orderType;
-    private final @kg int quantity;
+    private final @kg double quantity;
 
-    public OrderSummary(@kg int quantity, PricePerKg pricePerKg, Order.Type orderType) {
+    public OrderSummary(@kg double quantity, PricePerKg pricePerKg, Order.Type orderType) {
         this.quantity = quantity;
         this.orderType = orderType;
         this.pricePerKg = pricePerKg;
     }
 
-    public OrderSummary(Bid bid, List<@kg Integer> quantities) {
+    public OrderSummary(Bid bid, List<@kg Double> quantities) {
         this(total(quantities), bid.pricePerKg(), bid.orderType());
     }
 
-    private static @kg int mySum(@kg int acc, @kg int q) {
-        @kg int result = (acc + q);
+    private static @kg double mySum(@kg double acc, @kg double q) {
+        @kg double result = (acc + q);
         return result;
     }
 
-    private static @kg int total(List<@kg Integer> quantities) {
+    private static @kg double total(List<@kg Double> quantities) {
         return quantities.stream().reduce(Zero_Kg, (acc, q) -> mySum(acc, q));
     }
 
@@ -53,7 +53,7 @@ final public class OrderSummary {
         return this.pricePerKg;
     }
 
-    public @kg int quantity() {
+    public @kg double quantity() {
         return this.quantity;
     }
 

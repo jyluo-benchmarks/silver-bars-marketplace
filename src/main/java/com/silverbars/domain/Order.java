@@ -8,18 +8,18 @@ final public class Order {
     public enum Type { Buy, Sell }
 
     private final UserId userId;
-    private final @kg int quantity;
+    private final @kg double quantity;
     private final PricePerKg pricePerKg;
     private final Order.Type orderType;
 
-    public Order(UserId userId, @kg int quantity, PricePerKg pricePerKg, Order.Type orderType) {
+    public Order(UserId userId, @kg double quantity, PricePerKg pricePerKg, Order.Type orderType) {
         this.userId = userId;
         this.quantity = quantity;
         this.pricePerKg = pricePerKg;
         this.orderType = orderType;
     }
 
-    public @kg int quantity() {
+    public @kg double quantity() {
         return quantity;
     }
 

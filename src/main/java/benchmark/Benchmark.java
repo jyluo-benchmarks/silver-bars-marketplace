@@ -27,7 +27,7 @@ public class Benchmark {
     public static final int repetitions = 1000000;
     public static final int pricePerBar = 1;
 
-    public static final @kg int numOfBarsPerOrder = 1 * kg;
+    public static final @kg double numOfBarsPerOrder = 1 * kg;
     // public static final @kg long numOfBarsPerOrder = 1L * kg;
     // public static final @kg float numOfBarsPerOrder = 0.5f * kg;
     // public static final @kg Number numOfBarsPerOrder = 0.5d * kg;
@@ -64,13 +64,13 @@ public class Benchmark {
 
         System.out.println(summary);
 
-        @kg int quantity = summary.quantity();
+        @kg double quantity = summary.quantity();
 
         assert quantity == numOfBarsPerOrder * repetitions;
         assert summary.pricePerKg().equals(PricePerKg.of(CAD, pricePerBar * repetitions));
 
         System.out.println(" Total ordered: " + quantity);
-        
+
         System.out.println("benchmark complete");
     }
 }

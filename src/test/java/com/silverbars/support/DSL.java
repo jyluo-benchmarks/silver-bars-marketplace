@@ -10,15 +10,15 @@ import static org.joda.money.CurrencyUnit.GBP;
 
 public class DSL {
 
-    public static Order buy(@kg int quantity, PricePerKg price, UserId userId) {
+    public static Order buy(@kg double quantity, PricePerKg price, UserId userId) {
         return new Order(userId, quantity, price, Order.Type.Buy);
     }
 
-    public static Order sell(@kg int quantity, PricePerKg price, UserId userId) {
+    public static Order sell(@kg double quantity, PricePerKg price, UserId userId) {
         return new Order(userId, quantity, price, Order.Type.Sell);
     }
 
-    public static @kg int kg(Number value) {
+    public static @kg double kg(Number value) {
         return value.byteValue();
     }
 

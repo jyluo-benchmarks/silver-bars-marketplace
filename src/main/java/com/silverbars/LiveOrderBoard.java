@@ -35,7 +35,7 @@ public class LiveOrderBoard {
                 collect(toList());
     }
 
-    private Function<Map.Entry<Bid, List<@kg Integer>>, OrderSummary> toOrderSummary() {
+    private Function<Map.Entry<Bid, List<@kg Double>>, OrderSummary> toOrderSummary() {
         return entry -> new OrderSummary(entry.getKey(), entry.getValue());
     }
 }
