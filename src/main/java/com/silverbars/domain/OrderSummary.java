@@ -4,6 +4,8 @@ import tec.uom.se.quantity.Quantities;
 
 import javax.measure.Quantity;
 import javax.measure.quantity.Mass;
+
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Objects;
 
@@ -11,7 +13,11 @@ import static tec.uom.se.unit.Units.KILOGRAM;
 
 final public class OrderSummary {
 
-    static private final Quantity<Mass> Zero_Kg = Quantities.getQuantity(0.0, KILOGRAM);
+    // adjusted to use BigDecimal to exercise DecimalQuantity
+    static private final Quantity<Mass> Zero_Kg = Quantities.getQuantity(new BigDecimal(0.0),
+            KILOGRAM);
+    // static private final Quantity<Mass> Zero_Kg = Quantities.getQuantity(0.0,
+    // KILOGRAM);
 
     private final PricePerKg pricePerKg;
     private final Order.Type orderType;
