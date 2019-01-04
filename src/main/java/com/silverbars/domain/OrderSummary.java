@@ -16,10 +16,10 @@ import static tec.uom.se.unit.Units.KILOGRAM;
 
 final public class OrderSummary {
 
-//    public static final Number ZEROVAL = new Byte((byte) 0);
+    // public static final Number ZEROVAL = new Byte((byte) 0);
     // public static final Number ZEROVAL = new Short((short) 0);
-//     public static final Number ZEROVAL = new Integer(0);
-     public static final Number ZEROVAL = new Long(0);
+    public static final Number ZEROVAL = new Integer(0);
+    // public static final Number ZEROVAL = new Long(0);
     // public static final Number ZEROVAL = new Float(0.0);
     // public static final Number ZEROVAL = new Double(0.0);
     // public static final Number ZEROVAL = new AtomicInteger(0);

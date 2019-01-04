@@ -32,3 +32,13 @@ echo "Number Type:"
 grep -w "concrete order number class" output.txt | cut -d ':' -f 2 | \
     awk -v tab="\t" '{sum = $0} END {printf sum tab}'
 echo ""
+
+echo "Summary Type:"
+grep -w "concrete summary quantity class" output.txt | cut -d ':' -f 2 | \
+    awk -v tab="\t" '{sum = $0} END {printf sum tab}'
+echo ""
+
+echo "Summary Number Type:"
+grep -w "concrete summary number class" output.txt | cut -d ':' -f 2 | \
+    awk -v tab="\t" '{sum = $0} END {printf sum tab}'
+echo ""

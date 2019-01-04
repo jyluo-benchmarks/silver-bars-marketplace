@@ -25,13 +25,15 @@ public class Benchmark {
 
     public static final UserId Alice = UserId.of("user 1");
 
-    public static final int repetitions = 1000000;
+    // 1000000
+
+    public static final int repetitions = 3000000;
     public static final int pricePerBar = 1;
 
-//    public static final Number barValue = new Byte((byte) 1);
+    // public static final Number barValue = new Byte((byte) 1);
     // public static final Number barValue = new Short((short) 1);
-//     public static final Number barValue = new Integer(1);
-     public static final Number barValue = new Long(1);
+    public static final Number barValue = new Integer(1);
+    // public static final Number barValue = new Long(1);
     // public static final Number barValue = new Float(0.5);
     // public static final Number barValue = new Double(0.5);
     // public static final Number barValue = new AtomicInteger(1);
