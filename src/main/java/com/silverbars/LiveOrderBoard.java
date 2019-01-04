@@ -25,6 +25,7 @@ public class LiveOrderBoard {
         registeredOrders.remove(order);
     }
 
+    @SuppressWarnings("units")
     public List<OrderSummary> summary() {
         return registeredOrders.stream().
                 collect(groupingBy(Bid::forOrder, mapping(Order::quantity, toList()))).
