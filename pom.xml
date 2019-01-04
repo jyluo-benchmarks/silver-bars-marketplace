@@ -19,9 +19,11 @@
 
     <dependencies>
         <dependency>
-            <groupId>tec.uom</groupId>
-            <artifactId>uom-se</artifactId>
-            <version>1.0.4</version>
+            <groupId>units</groupId>
+            <artifactId>units</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/../../../build/libs/units-inference.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.joda</groupId>

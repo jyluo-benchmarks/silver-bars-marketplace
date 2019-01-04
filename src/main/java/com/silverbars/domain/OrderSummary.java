@@ -1,9 +1,7 @@
 package com.silverbars.domain;
 
-import tec.uom.se.quantity.Quantities;
-
-import javax.measure.Quantity;
-import javax.measure.quantity.Mass;
+import units.qual.kg;
+import static units.UnitsTools.kg;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -12,54 +10,38 @@ import java.util.Objects;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
 
-import static tec.uom.se.unit.Units.KILOGRAM;
-
 final public class OrderSummary {
 
-    // public static final Number ZEROVAL = new Byte((byte) 0);
-    // public static final Number ZEROVAL = new Short((short) 0);
-    public static final Number ZEROVAL = new Integer(0);
-    // public static final Number ZEROVAL = new Long(0);
-    // public static final Number ZEROVAL = new Float(0.0);
-    // public static final Number ZEROVAL = new Double(0.0);
-    // public static final Number ZEROVAL = new AtomicInteger(0);
-    // public static final Number ZEROVAL = new AtomicLong(0);
-    // to exercise DecimalQuantity
-    // static private final Number ZEROVAL = BigInteger.valueOf(0);
-    // private static final Number ZEROVAL = new BigDecimal(0.0);
-
-    private static final Quantity<Mass> Zero_Kg = Quantities.getQuantity(ZEROVAL, KILOGRAM);
-    // static private final Quantity<Mass> Zero_Kg = Quantities.getQuantity(0.0,
-    // KILOGRAM);
-
-    static {
-        System.out.println("zero constant quantity class: " + Zero_Kg.getClass());
-        System.out.println("zero constant number class: " + Zero_Kg.getValue().getClass());
-    }
+    public static final @kg int Zero_Kg = 0 * kg;
+    // public static final @kg long Zero_Kg = 0L * kg;
+    // public static final @kg float Zero_Kg = 0.0f * kg;
+    // public static final @kg Number Zero_Kg = 0.0d * kg;
+    // public static final @kg Number Zero_Kg = new AtomicInteger(0);
+    // public static final @kg Number Zero_Kg = new AtomicLong(0);
+    // for DecimalQuantity
+    // public static final @kg Number Zero_Kg = BigInteger.valueOf(0);
+    // public static final @kg Number Zero_Kg = new BigDecimal(0.0);
 
     private final PricePerKg pricePerKg;
     private final Order.Type orderType;
-    private final Quantity<Mass> quantity;
+    private final @kg int quantity;
 
-    public OrderSummary(Quantity<Mass> quantity, PricePerKg pricePerKg, Order.Type orderType) {
+    public OrderSummary(@kg int quantity, PricePerKg pricePerKg, Order.Type orderType) {
         this.quantity = quantity;
         this.orderType = orderType;
         this.pricePerKg = pricePerKg;
     }
 
-    public OrderSummary(Bid bid, List<Quantity<Mass>> quantities) {
+    public OrderSummary(Bid bid, List<@kg Integer> quantities) {
         this(total(quantities), bid.pricePerKg(), bid.orderType());
     }
 
-    private static Quantity<Mass> mySum(Quantity<Mass> acc, Quantity<Mass> q) {
-        Quantity<Mass> result = acc.add(q);
-        // System.out.println("zero constant quantity class: " + acc.getClass());
-        // System.out.println("zero constant number class: " +
-        // acc.getValue().getClass());
+    private static @kg int mySum(@kg int acc, @kg int q) {
+        @kg int result = (acc + q);
         return result;
     }
 
-    private static Quantity<Mass> total(List<Quantity<Mass>> quantities) {
+    private static @kg int total(List<@kg Integer> quantities) {
         return quantities.stream().reduce(Zero_Kg, (acc, q) -> mySum(acc, q));
     }
 
@@ -71,7 +53,7 @@ final public class OrderSummary {
         return this.pricePerKg;
     }
 
-    public Quantity<Mass> quantity() {
+    public @kg int quantity() {
         return this.quantity;
     }
 

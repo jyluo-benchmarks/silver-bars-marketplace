@@ -6,8 +6,7 @@ import com.silverbars.domain.PricePerKg;
 import org.junit.Before;
 import org.junit.Test;
 
-import javax.measure.Quantity;
-import javax.measure.quantity.Mass;
+import units.qual.kg;
 
 import static com.silverbars.support.DSL.*;
 import static com.silverbars.support.Users.Alice;
@@ -135,11 +134,11 @@ public class LiveOrderBoardTest {
 
     // a tiny DSL to improve the readability of the test scenarios
 
-    private static OrderSummary buyOrderSummary(Quantity<Mass> quantity, PricePerKg pricePerKg) {
+    private static OrderSummary buyOrderSummary(@kg int quantity, PricePerKg pricePerKg) {
         return new OrderSummary(quantity, pricePerKg, Order.Type.Buy);
     }
 
-    private static OrderSummary sellOrderSummary(Quantity<Mass> quantity, PricePerKg pricePerKg) {
+    private static OrderSummary sellOrderSummary(@kg int quantity, PricePerKg pricePerKg) {
         return new OrderSummary(quantity, pricePerKg, Order.Type.Sell);
     }
 }
