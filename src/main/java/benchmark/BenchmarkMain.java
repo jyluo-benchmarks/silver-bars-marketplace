@@ -22,8 +22,6 @@ public class BenchmarkMain {
 
     public static final UserId Alice = UserId.of("user 1");
 
-    // 1000000
-
     public static final int repetitions = 1000000;
     public static final int pricePerBar = 1;
 

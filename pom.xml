@@ -62,6 +62,14 @@
         </dependency>
 
         <dependency>
+            <groupId>units</groupId>
+            <artifactId>units</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/../../../build/libs/units-inference.jar</systemPath>
+        </dependency>
+
+        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
