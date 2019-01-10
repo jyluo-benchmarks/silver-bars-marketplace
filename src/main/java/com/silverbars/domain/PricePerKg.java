@@ -1,9 +1,9 @@
 package com.silverbars.domain;
 
+import java.util.Objects;
+
 import org.joda.money.CurrencyUnit;
 import org.joda.money.Money;
-
-import java.util.Objects;
 
 final public class PricePerKg implements Comparable<PricePerKg> {
 

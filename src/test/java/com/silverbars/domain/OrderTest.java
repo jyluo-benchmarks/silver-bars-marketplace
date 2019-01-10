@@ -1,12 +1,13 @@
 package com.silverbars.domain;
 
-import org.joda.money.Money;
-import org.junit.Test;
-import tec.uom.se.quantity.Quantities;
-
 import static org.assertj.core.api.Java6Assertions.assertThat;
 import static org.joda.money.CurrencyUnit.GBP;
 import static tec.uom.se.unit.Units.KILOGRAM;
+
+import org.joda.money.Money;
+import org.junit.Test;
+
+import tec.uom.se.quantity.Quantities;
 
 public class OrderTest {
 

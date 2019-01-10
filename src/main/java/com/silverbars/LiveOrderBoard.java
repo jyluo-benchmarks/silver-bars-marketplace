@@ -1,17 +1,21 @@
 package com.silverbars;
 
-import com.silverbars.domain.Bid;
-import com.silverbars.domain.Order;
-import com.silverbars.domain.OrderSummary;
-
-import javax.measure.Quantity;
-import javax.measure.quantity.Mass;
-import java.util.*;
-import java.util.function.Function;
-
 import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.mapping;
 import static java.util.stream.Collectors.toList;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+
+import javax.measure.Quantity;
+import javax.measure.quantity.Mass;
+
+import com.silverbars.domain.Bid;
+import com.silverbars.domain.Order;
+import com.silverbars.domain.OrderSummary;
 
 public class LiveOrderBoard {
     private final List<Order> registeredOrders            = new ArrayList<>();

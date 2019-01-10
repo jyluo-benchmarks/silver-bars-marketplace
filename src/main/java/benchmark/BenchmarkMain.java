@@ -3,15 +3,12 @@ package benchmark;
 import static org.joda.money.CurrencyUnit.CAD;
 import static tec.uom.se.unit.Units.KILOGRAM;
 
-import java.math.BigDecimal;
-import java.math.BigInteger;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicLong;
 
 import javax.measure.Quantity;
 import javax.measure.quantity.Mass;
+
+import org.openjdk.jmh.annotations.Benchmark;
 
 import com.silverbars.LiveOrderBoard;
 import com.silverbars.domain.Order;
@@ -20,8 +17,6 @@ import com.silverbars.domain.PricePerKg;
 import com.silverbars.domain.UserId;
 
 import tec.uom.se.quantity.Quantities;
-
-import org.openjdk.jmh.annotations.Benchmark;
 
 public class BenchmarkMain {
 

@@ -1,16 +1,18 @@
 package com.silverbars.domain;
 
-import org.junit.Test;
+import static com.silverbars.support.DSL.buy;
+import static com.silverbars.support.DSL.kg;
+import static com.silverbars.support.DSL.£;
+import static com.silverbars.support.Users.Alice;
+import static java.util.Arrays.asList;
+import static java.util.stream.Collectors.groupingBy;
+import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static com.silverbars.support.DSL.*;
-import static com.silverbars.support.Users.Alice;
-import static java.util.Arrays.asList;
-import static java.util.stream.Collectors.groupingBy;
-import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
+import org.junit.Test;
 
 public class BidTest {
 

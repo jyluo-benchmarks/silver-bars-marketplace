@@ -1,18 +1,22 @@
 package com.silverbars;
 
-import com.silverbars.domain.Order;
-import com.silverbars.domain.OrderSummary;
-import com.silverbars.domain.PricePerKg;
-import org.junit.Before;
-import org.junit.Test;
+import static com.silverbars.support.DSL.buy;
+import static com.silverbars.support.DSL.kg;
+import static com.silverbars.support.DSL.sell;
+import static com.silverbars.support.DSL.£;
+import static com.silverbars.support.Users.Alice;
+import static com.silverbars.support.Users.Bob;
+import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
 import javax.measure.Quantity;
 import javax.measure.quantity.Mass;
 
-import static com.silverbars.support.DSL.*;
-import static com.silverbars.support.Users.Alice;
-import static com.silverbars.support.Users.Bob;
-import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
+import org.junit.Before;
+import org.junit.Test;
+
+import com.silverbars.domain.Order;
+import com.silverbars.domain.OrderSummary;
+import com.silverbars.domain.PricePerKg;
 
 public class LiveOrderBoardTest {
 

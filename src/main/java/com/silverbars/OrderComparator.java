@@ -1,10 +1,11 @@
 package com.silverbars;
 
-import com.silverbars.domain.Order;
-import com.silverbars.domain.OrderSummary;
+import static java.util.Comparator.comparing;
 
 import java.util.Comparator;
-import static java.util.Comparator.comparing;
+
+import com.silverbars.domain.Order;
+import com.silverbars.domain.OrderSummary;
 
 class OrderComparator implements Comparator<OrderSummary> {
     static private final Comparator<OrderSummary> byType            = comparing(OrderSummary::orderType);

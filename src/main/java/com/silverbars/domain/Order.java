@@ -1,8 +1,9 @@
 package com.silverbars.domain;
 
+import java.util.Objects;
+
 import javax.measure.Quantity;
 import javax.measure.quantity.Mass;
-import java.util.Objects;
 
 final public class Order {
     public enum Type { Buy, Sell }

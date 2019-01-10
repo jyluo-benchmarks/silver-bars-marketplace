@@ -1,15 +1,16 @@
 package com.silverbars.support;
 
-import com.silverbars.domain.Order;
-import com.silverbars.domain.PricePerKg;
-import com.silverbars.domain.UserId;
-import tec.uom.se.quantity.Quantities;
+import static org.joda.money.CurrencyUnit.GBP;
+import static tec.uom.se.unit.Units.KILOGRAM;
 
 import javax.measure.Quantity;
 import javax.measure.quantity.Mass;
 
-import static org.joda.money.CurrencyUnit.GBP;
-import static tec.uom.se.unit.Units.KILOGRAM;
+import com.silverbars.domain.Order;
+import com.silverbars.domain.PricePerKg;
+import com.silverbars.domain.UserId;
+
+import tec.uom.se.quantity.Quantities;
 
 public class DSL {
 
