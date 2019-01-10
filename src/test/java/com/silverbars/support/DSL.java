@@ -18,8 +18,8 @@ public class DSL {
         return new Order(userId, quantity, price, Order.Type.Sell);
     }
 
-    public static @kg double kg(Number value) {
-        return value.byteValue();
+    public static @kg double kg(@kg double value) {
+        return value;
     }
 
     public static PricePerKg £(double amount) {
