@@ -51,16 +51,22 @@
         </dependency>
 
         <dependency>
-            <groupId>units</groupId>
-            <artifactId>units</artifactId>
-            <version>1.0</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/../../../build/libs/units-inference.jar</systemPath>
+            <groupId>tec.uom</groupId>
+            <artifactId>uom-se</artifactId>
+            <version>1.0.4</version>
         </dependency>
         <dependency>
             <groupId>org.joda</groupId>
             <artifactId>joda-money</artifactId>
             <version>0.12</version>
+        </dependency>
+
+        <dependency>
+            <groupId>units</groupId>
+            <artifactId>units</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/../../../build/libs/units-inference.jar</systemPath>
         </dependency>
 
         <dependency>
