@@ -12,8 +12,8 @@ import com.silverbars.domain.OrderSummary;
 import com.silverbars.domain.PricePerKg;
 import com.silverbars.domain.UserId;
 
-import units.UnitsTools;
-import units.qual.*;
+
+
 
 public class BenchmarkMain {
 
@@ -22,7 +22,7 @@ public class BenchmarkMain {
     public static final int repetitions = 1000000;
     public static final int pricePerBar = 1;
 
-    public static final @kg double numOfBarsPerOrder = 0.5 * UnitsTools.kg;
+    public static final double numOfBarsPerOrder = 0.5 ;
 
     public static final LiveOrderBoard board = new LiveOrderBoard();
 
@@ -63,7 +63,7 @@ public class BenchmarkMain {
 
         System.out.println(summary);
 
-        @kg double quantity = summary.quantity();
+        double quantity = summary.quantity();
 
         assert quantity == numOfBarsPerOrder * repetitions;
         assert summary.pricePerKg().equals(PricePerKg.of(CAD, pricePerBar * repetitions));

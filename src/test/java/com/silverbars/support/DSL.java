@@ -4,21 +4,21 @@ import com.silverbars.domain.Order;
 import com.silverbars.domain.PricePerKg;
 import com.silverbars.domain.UserId;
 
-import units.qual.kg;
+
 
 import static org.joda.money.CurrencyUnit.GBP;
 
 public class DSL {
 
-    public static Order buy(@kg double quantity, PricePerKg price, UserId userId) {
+    public static Order buy(double quantity, PricePerKg price, UserId userId) {
         return new Order(userId, quantity, price, Order.Type.Buy);
     }
 
-    public static Order sell(@kg double quantity, PricePerKg price, UserId userId) {
+    public static Order sell(double quantity, PricePerKg price, UserId userId) {
         return new Order(userId, quantity, price, Order.Type.Sell);
     }
 
-    public static @kg double kg(@kg double value) {
+    public static double kg(double value) {
         return value;
     }
 

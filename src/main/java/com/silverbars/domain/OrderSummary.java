@@ -3,35 +3,35 @@ package com.silverbars.domain;
 import java.util.List;
 import java.util.Objects;
 
-import units.UnitsTools;
-import units.qual.*;
+
+
 
 final public class OrderSummary {
 
-    public static final @kg double ZEROVAL = 0.0 * UnitsTools.kg;
+    public static final double ZEROVAL = 0.0 ;
 
-    private static final @kg double Zero_Kg = ZEROVAL;
+    private static final double Zero_Kg = ZEROVAL;
 
     private final PricePerKg pricePerKg;
     private final Order.Type orderType;
-    private final @kg double quantity;
+    private final double quantity;
 
-    public OrderSummary(@kg double quantity, PricePerKg pricePerKg, Order.Type orderType) {
+    public OrderSummary(double quantity, PricePerKg pricePerKg, Order.Type orderType) {
         this.quantity = quantity;
         this.orderType = orderType;
         this.pricePerKg = pricePerKg;
     }
 
-    public OrderSummary(Bid bid, List<@kg Double> quantities) {
+    public OrderSummary(Bid bid, List<Double> quantities) {
         this(total(quantities), bid.pricePerKg(), bid.orderType());
     }
 
-    private static @kg double mySum(@kg double acc, @kg double q) {
-        @kg double result = acc + q;
+    private static double mySum(double acc, double q) {
+        double result = acc + q;
         return result;
     }
 
-    private static @kg double total(List<@kg Double> quantities) {
+    private static double total(List<Double> quantities) {
         return quantities.stream().reduce(Zero_Kg, (acc, q) -> mySum(acc, q));
     }
 
@@ -43,7 +43,7 @@ final public class OrderSummary {
         return this.pricePerKg;
     }
 
-    public @kg double quantity() {
+    public double quantity() {
         return this.quantity;
     }
 

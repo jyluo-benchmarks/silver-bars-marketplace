@@ -4,7 +4,7 @@ import com.silverbars.domain.Bid;
 import com.silverbars.domain.Order;
 import com.silverbars.domain.OrderSummary;
 
-import units.qual.kg;
+
 
 import java.util.*;
 import java.util.function.Function;
@@ -35,7 +35,7 @@ public class LiveOrderBoard {
                 collect(toList());
     }
 
-    private Function<Map.Entry<Bid, List<@kg Double>>, OrderSummary> toOrderSummary() {
+    private Function<Map.Entry<Bid, List<Double>>, OrderSummary> toOrderSummary() {
         return entry -> new OrderSummary(entry.getKey(), entry.getValue());
     }
 }

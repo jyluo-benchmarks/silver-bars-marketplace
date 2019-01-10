@@ -1,6 +1,6 @@
 package com.silverbars.domain;
 
-import units.qual.kg;
+
 
 import java.util.Objects;
 
@@ -8,18 +8,18 @@ final public class Order {
     public enum Type { Buy, Sell }
 
     private final UserId userId;
-    private final @kg double quantity;
+    private final double quantity;
     private final PricePerKg pricePerKg;
     private final Order.Type orderType;
 
-    public Order(UserId userId, @kg double quantity, PricePerKg pricePerKg, Order.Type orderType) {
+    public Order(UserId userId, double quantity, PricePerKg pricePerKg, Order.Type orderType) {
         this.userId = userId;
         this.quantity = quantity;
         this.pricePerKg = pricePerKg;
         this.orderType = orderType;
     }
 
-    public @kg double quantity() {
+    public double quantity() {
         return quantity;
     }
 

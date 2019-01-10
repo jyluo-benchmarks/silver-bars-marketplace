@@ -1,140 +1,140 @@
 Starting benchmark
 Insertion done
-insertion to board (ms): 170
-board summary (ms): 98
-OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0 kg}
- Total ordered: 500000.0 kg
-benchmark complete
-Starting benchmark
-Insertion done
-insertion to board (ms): 164
-board summary (ms): 96
-OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0 kg}
- Total ordered: 500000.0 kg
-benchmark complete
-Starting benchmark
-Insertion done
-insertion to board (ms): 168
-board summary (ms): 98
-OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0 kg}
- Total ordered: 500000.0 kg
-benchmark complete
-Starting benchmark
-Insertion done
-insertion to board (ms): 162
-board summary (ms): 101
-OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0 kg}
- Total ordered: 500000.0 kg
-benchmark complete
-Starting benchmark
-Insertion done
-insertion to board (ms): 161
-board summary (ms): 99
-OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0 kg}
- Total ordered: 500000.0 kg
-benchmark complete
-Starting benchmark
-Insertion done
-insertion to board (ms): 163
-board summary (ms): 95
-OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0 kg}
- Total ordered: 500000.0 kg
-benchmark complete
-Starting benchmark
-Insertion done
-insertion to board (ms): 164
-board summary (ms): 100
-OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0 kg}
- Total ordered: 500000.0 kg
-benchmark complete
-Starting benchmark
-Insertion done
-insertion to board (ms): 161
-board summary (ms): 98
-OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0 kg}
- Total ordered: 500000.0 kg
-benchmark complete
-Starting benchmark
-Insertion done
-insertion to board (ms): 165
-board summary (ms): 97
-OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0 kg}
- Total ordered: 500000.0 kg
-benchmark complete
-Starting benchmark
-Insertion done
-insertion to board (ms): 165
-board summary (ms): 97
-OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0 kg}
- Total ordered: 500000.0 kg
-benchmark complete
-Starting benchmark
-Insertion done
-insertion to board (ms): 162
-board summary (ms): 97
-OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0 kg}
- Total ordered: 500000.0 kg
-benchmark complete
-Starting benchmark
-Insertion done
-insertion to board (ms): 164
-board summary (ms): 585
-OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0 kg}
- Total ordered: 500000.0 kg
-benchmark complete
-Starting benchmark
-Insertion done
-insertion to board (ms): 162
+insertion to board (ms): 140
 board summary (ms): 94
-OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0 kg}
- Total ordered: 500000.0 kg
+OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0}
+ Total ordered: 500000.0
 benchmark complete
 Starting benchmark
 Insertion done
-insertion to board (ms): 163
-board summary (ms): 102
-OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0 kg}
- Total ordered: 500000.0 kg
-benchmark complete
-Starting benchmark
-Insertion done
-insertion to board (ms): 165
-board summary (ms): 100
-OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0 kg}
- Total ordered: 500000.0 kg
-benchmark complete
-Starting benchmark
-Insertion done
-insertion to board (ms): 164
-board summary (ms): 95
-OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0 kg}
- Total ordered: 500000.0 kg
-benchmark complete
-Starting benchmark
-Insertion done
-insertion to board (ms): 164
-board summary (ms): 96
-OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0 kg}
- Total ordered: 500000.0 kg
-benchmark complete
-Starting benchmark
-Insertion done
-insertion to board (ms): 163
-board summary (ms): 98
-OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0 kg}
- Total ordered: 500000.0 kg
-benchmark complete
-Starting benchmark
-Insertion done
-insertion to board (ms): 163
+insertion to board (ms): 140
 board summary (ms): 93
-OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0 kg}
- Total ordered: 500000.0 kg
+OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0}
+ Total ordered: 500000.0
 benchmark complete
 Starting benchmark
 Insertion done
-insertion to board (ms): 165
-board summary (ms): 115
-OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0 kg}
- Total ordered: 500000.0 kg
+insertion to board (ms): 141
+board summary (ms): 92
+OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0}
+ Total ordered: 500000.0
+benchmark complete
+Starting benchmark
+Insertion done
+insertion to board (ms): 143
+board summary (ms): 96
+OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0}
+ Total ordered: 500000.0
+benchmark complete
+Starting benchmark
+Insertion done
+insertion to board (ms): 142
+board summary (ms): 88
+OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0}
+ Total ordered: 500000.0
+benchmark complete
+Starting benchmark
+Insertion done
+insertion to board (ms): 142
+board summary (ms): 96
+OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0}
+ Total ordered: 500000.0
+benchmark complete
+Starting benchmark
+Insertion done
+insertion to board (ms): 138
+board summary (ms): 86
+OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0}
+ Total ordered: 500000.0
+benchmark complete
+Starting benchmark
+Insertion done
+insertion to board (ms): 141
+board summary (ms): 86
+OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0}
+ Total ordered: 500000.0
+benchmark complete
+Starting benchmark
+Insertion done
+insertion to board (ms): 143
+board summary (ms): 97
+OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0}
+ Total ordered: 500000.0
+benchmark complete
+Starting benchmark
+Insertion done
+insertion to board (ms): 143
+board summary (ms): 91
+OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0}
+ Total ordered: 500000.0
+benchmark complete
+Starting benchmark
+Insertion done
+insertion to board (ms): 146
+board summary (ms): 94
+OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0}
+ Total ordered: 500000.0
+benchmark complete
+Starting benchmark
+Insertion done
+insertion to board (ms): 144
+board summary (ms): 89
+OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0}
+ Total ordered: 500000.0
+benchmark complete
+Starting benchmark
+Insertion done
+insertion to board (ms): 143
+board summary (ms): 93
+OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0}
+ Total ordered: 500000.0
+benchmark complete
+Starting benchmark
+Insertion done
+insertion to board (ms): 140
+board summary (ms): 97
+OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0}
+ Total ordered: 500000.0
+benchmark complete
+Starting benchmark
+Insertion done
+insertion to board (ms): 143
+board summary (ms): 91
+OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0}
+ Total ordered: 500000.0
+benchmark complete
+Starting benchmark
+Insertion done
+insertion to board (ms): 141
+board summary (ms): 91
+OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0}
+ Total ordered: 500000.0
+benchmark complete
+Starting benchmark
+Insertion done
+insertion to board (ms): 145
+board summary (ms): 88
+OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0}
+ Total ordered: 500000.0
+benchmark complete
+Starting benchmark
+Insertion done
+insertion to board (ms): 143
+board summary (ms): 92
+OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0}
+ Total ordered: 500000.0
+benchmark complete
+Starting benchmark
+Insertion done
+insertion to board (ms): 144
+board summary (ms): 88
+OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0}
+ Total ordered: 500000.0
+benchmark complete
+Starting benchmark
+Insertion done
+insertion to board (ms): 139
+board summary (ms): 89
+OrderSummary{pricePerKg=PricePerKg{amount=CAD 1.00}, orderType=Buy, quantity=500000.0}
+ Total ordered: 500000.0
 benchmark complete

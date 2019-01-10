@@ -6,7 +6,7 @@ import com.silverbars.domain.PricePerKg;
 import org.junit.Before;
 import org.junit.Test;
 
-import units.qual.kg;
+
 
 import static com.silverbars.support.DSL.*;
 import static com.silverbars.support.Users.Alice;
@@ -134,11 +134,11 @@ public class LiveOrderBoardTest {
 
     // a tiny DSL to improve the readability of the test scenarios
 
-    private static OrderSummary buyOrderSummary(@kg double quantity, PricePerKg pricePerKg) {
+    private static OrderSummary buyOrderSummary(double quantity, PricePerKg pricePerKg) {
         return new OrderSummary(quantity, pricePerKg, Order.Type.Buy);
     }
 
-    private static OrderSummary sellOrderSummary(@kg double quantity, PricePerKg pricePerKg) {
+    private static OrderSummary sellOrderSummary(double quantity, PricePerKg pricePerKg) {
         return new OrderSummary(quantity, pricePerKg, Order.Type.Sell);
     }
 }
