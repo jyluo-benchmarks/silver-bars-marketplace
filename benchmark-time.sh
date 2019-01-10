@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mvn compile
+mvn clean compile
 
 if [ -f output.txt ]; then
     echo "removing output.txt"
