@@ -10,7 +10,7 @@ import java.util.Objects;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
 
-final public class OrderSummary {
+public class OrderSummary {
 
     public static final @kg double Zero_Kg = 0.0 * kg;
     // public static final @kg long Zero_Kg = 0L * kg;

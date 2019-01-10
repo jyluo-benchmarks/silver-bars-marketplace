@@ -18,7 +18,9 @@ import com.silverbars.domain.OrderSummary;
 import com.silverbars.domain.PricePerKg;
 import com.silverbars.domain.UserId;
 
-public class Benchmark {
+import org.openjdk.jmh.annotations.Benchmark;
+
+public class BenchmarkMain {
 
     public static final UserId Alice = UserId.of("user 1");
 
@@ -37,22 +39,34 @@ public class Benchmark {
     // public static final @kg Number numOfBarsPerOrder = BigInteger.valueOf(1);
     // public static final @kg Number numOfBarsPerOrder = new BigDecimal(0.5);
 
-    public static void main(String[] args) {
-        System.out.println("Starting benchmark");
+    public static final LiveOrderBoard board = new LiveOrderBoard();
 
-        LiveOrderBoard board = new LiveOrderBoard();
+    public static List<OrderSummary> summaries;
 
-        long insertStart = System.currentTimeMillis();
+    @Benchmark
+    public static void insertOrders() {
         for (int i = 0; i < repetitions; i++) {
             board.register(new Order(Alice, numOfBarsPerOrder, PricePerKg.of(CAD, pricePerBar),
                     Order.Type.Buy));
         }
+    }
+
+    @Benchmark
+    public static void makeSummary() {
+        summaries = board.summary();
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Starting benchmark");
+
+        long insertStart = System.currentTimeMillis();
+        insertOrders();
         long insertEnd = System.currentTimeMillis();
 
         System.out.println("Insertion done");
 
         long summaryStart = System.currentTimeMillis();
-        List<OrderSummary> summaries = board.summary();
+        makeSummary();
         long summaryEnd = System.currentTimeMillis();
 
         System.out.println("insertion to board (ms): " + (insertEnd - insertStart));
