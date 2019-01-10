@@ -1,7 +1,5 @@
 package com.silverbars.domain;
 
-
-
 import java.util.Objects;
 
 final public class Order {

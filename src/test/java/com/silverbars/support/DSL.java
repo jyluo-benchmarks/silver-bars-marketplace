@@ -4,8 +4,6 @@ import com.silverbars.domain.Order;
 import com.silverbars.domain.PricePerKg;
 import com.silverbars.domain.UserId;
 
-
-
 import static org.joda.money.CurrencyUnit.GBP;
 
 public class DSL {

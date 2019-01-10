@@ -4,8 +4,6 @@ import com.silverbars.domain.Bid;
 import com.silverbars.domain.Order;
 import com.silverbars.domain.OrderSummary;
 
-
-
 import java.util.*;
 import java.util.function.Function;
 

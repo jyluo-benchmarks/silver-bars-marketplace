@@ -6,8 +6,6 @@ import com.silverbars.domain.PricePerKg;
 import org.junit.Before;
 import org.junit.Test;
 
-
-
 import static com.silverbars.support.DSL.*;
 import static com.silverbars.support.Users.Alice;
 import static com.silverbars.support.Users.Bob;

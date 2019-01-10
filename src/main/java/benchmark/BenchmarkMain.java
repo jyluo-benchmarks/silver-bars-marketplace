@@ -12,9 +12,6 @@ import com.silverbars.domain.OrderSummary;
 import com.silverbars.domain.PricePerKg;
 import com.silverbars.domain.UserId;
 
-
-
-
 public class BenchmarkMain {
 
     public static final UserId Alice = UserId.of("user 1");

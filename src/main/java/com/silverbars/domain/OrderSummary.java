@@ -3,9 +3,6 @@ package com.silverbars.domain;
 import java.util.List;
 import java.util.Objects;
 
-
-
-
 final public class OrderSummary {
 
     public static final double ZEROVAL = 0.0 ;
