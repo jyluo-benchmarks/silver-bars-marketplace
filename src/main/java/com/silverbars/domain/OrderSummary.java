@@ -1,26 +1,16 @@
 package com.silverbars.domain;
 
-import units.qual.kg;
-import static units.UnitsTools.kg;
-
-import java.math.BigDecimal;
-import java.math.BigInteger;
 import java.util.List;
 import java.util.Objects;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicLong;
 
-public class OrderSummary {
+import units.UnitsTools;
+import units.qual.*;
 
-    public static final @kg double Zero_Kg = 0.0 * kg;
-    // public static final @kg long Zero_Kg = 0L * kg;
-    // public static final @kg float Zero_Kg = 0.0f * kg;
-    // public static final @kg Number Zero_Kg = 0.0d * kg;
-    // public static final @kg Number Zero_Kg = new AtomicInteger(0);
-    // public static final @kg Number Zero_Kg = new AtomicLong(0);
-    // for DecimalQuantity
-    // public static final @kg Number Zero_Kg = BigInteger.valueOf(0);
-    // public static final @kg Number Zero_Kg = new BigDecimal(0.0);
+final public class OrderSummary {
+
+    public static final @kg double ZEROVAL = 0.0 * UnitsTools.kg;
+
+    private static final @kg double Zero_Kg = ZEROVAL;
 
     private final PricePerKg pricePerKg;
     private final Order.Type orderType;
@@ -37,7 +27,7 @@ public class OrderSummary {
     }
 
     private static @kg double mySum(@kg double acc, @kg double q) {
-        @kg double result = (acc + q);
+        @kg double result = acc + q;
         return result;
     }
 

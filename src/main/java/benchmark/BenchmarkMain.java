@@ -2,15 +2,9 @@ package benchmark;
 
 import static org.joda.money.CurrencyUnit.CAD;
 
-import java.math.BigDecimal;
-import java.math.BigInteger;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicLong;
 
-import units.qual.kg;
-import static units.UnitsTools.kg;
+import org.openjdk.jmh.annotations.Benchmark;
 
 import com.silverbars.LiveOrderBoard;
 import com.silverbars.domain.Order;
@@ -18,26 +12,17 @@ import com.silverbars.domain.OrderSummary;
 import com.silverbars.domain.PricePerKg;
 import com.silverbars.domain.UserId;
 
-import org.openjdk.jmh.annotations.Benchmark;
+import units.UnitsTools;
+import units.qual.*;
 
 public class BenchmarkMain {
 
     public static final UserId Alice = UserId.of("user 1");
 
-    // 1000000
-
     public static final int repetitions = 1000000;
     public static final int pricePerBar = 1;
 
-    public static final @kg double numOfBarsPerOrder = 1 * kg;
-    // public static final @kg long numOfBarsPerOrder = 1L * kg;
-    // public static final @kg float numOfBarsPerOrder = 0.5f * kg;
-    // public static final @kg Number numOfBarsPerOrder = 0.5d * kg;
-    // public static final @kg Number numOfBarsPerOrder = new AtomicInteger(1);
-    // public static final @kg Number numOfBarsPerOrder = new AtomicLong(1);
-    // for DecimalQuantity
-    // public static final @kg Number numOfBarsPerOrder = BigInteger.valueOf(1);
-    // public static final @kg Number numOfBarsPerOrder = new BigDecimal(0.5);
+    public static final @kg double numOfBarsPerOrder = 0.5 * UnitsTools.kg;
 
     public static final LiveOrderBoard board = new LiveOrderBoard();
 
